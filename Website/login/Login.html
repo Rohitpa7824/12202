@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Student management System</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="../css/bootstrap.css" rel="stylesheet"/>
+    <link href="../css/login.css" rel="stylesheet"/>
+    <script src="../js/jq-min-slim.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
+    <script src="../js/additional-methods.min.js"></script>
+    <script src="../js/bootstrap.js"></script>
+</head>
+<body style="background: url('../images/bg.jpg')">
+<br/>
+<br/>
+<br/>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="well col-lg-6" style="background: white;">
+            <form name="myForm" id="myForm" method="post" style="padding-left: 30px;padding-right: 30px;">
+                <div class="page-header text-center">
+                    <h2>Login</h2>
+                </div>
+                <div class="row form-group">
+                    <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="email" name="txtEmail" id="txtEmail" maxlength="254"
+                               class="form-control" placeholder="Email"
+                               required/>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input type="password" name="password" id="txtPassword" maxlength="30" class="form-control"
+                               placeholder="Password" required/>
+                    </div>
+                </div>
+                <div class="row text-right form-group">
+                    <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <a href="./ForgotPassword.html" id="lnkForgotPassword">Forgot Password?</a>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <input name="login" type="button" ID="btnLogin"
+                               class="btn btn-lg btn-success width_100" value="Login"/>
+                    </div>
+                </div>
+                <div class="row text-right form-group">
+                    <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        New User?
+                        <a href="./Registration.html" id="lnkRegistration">Sign Up</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-3"></div>
+    </div>
+</div>
+<script>
+    var valid = 1;
+    jQuery.validator.setDefaults({
+        highlight: function (element) {
+            jQuery(element).closest('.form-group').addClass('has-error');
+            valid = 0;
+        },
+        unhighlight: function (element) {
+            jQuery(element).closest('.form-group').removeClass('has-error');
+            valid = 1;
+        },
+        errorElement: 'span',
+        errorClass: 'label label-danger',
+        errorPlacement: function (error, element) {
+            if (element.parent('.input-group').length) {
+                error.insertAfter(element.parent());
+            } else {
+                error.insertAfter(element);
+            }
+        }
+    });
+    $("#myForm").validate({
+        rules: {
+            password: "required",
+            email: {
+                required: true,
+                email: true
+            }
+        },
+        messages: {
+            password: "Please specify your password.",
+            email: {
+                required: "Your Email is required.",
+                email: "Enter a valid email."
+            }
+        }
+    });
+    $('#btnLogin').click(function () {
+
+        if (valid == 1) {
+            var datatosend = {'Type': 'checklogin', 'username': $('#txtEmail').val(), 'pwd': $('#txtPassword').val()};
+            console.log(datatosend);
+            $.ajax({
+                cache: false,
+                url: "http://10.20.30.160:7824",
+                dataType: "json",
+                data: JSON.stringify(datatosend, null, '\t'),
+                contentType: 'application/json;charset=UTF-8',
+                type: 'POST',
+                success: function (data, status, xhr) {
+                    console.log(data);
+                    if (data.Succ == "True") {
+                        if(data.type == "teacher")
+                        {
+                            localStorage.setItem('teacherEmail', $('#txtEmail').val());
+                            localStorage.setItem('teacherName', data.name);
+                            window.location.href = "../dashboard/CTD.html";
+                        }
+                        else
+                        {
+                            localStorage.setItem('schoolEmail', $('#txtEmail').val());
+                            localStorage.setItem('schoolName', data.name);
+                            window.location.href = "../dashboard/Index.html";
+                        }
+
+                    }
+                    else {
+                        if (data.Succ == "False") {
+                            alert("Invalid Username or Password!");
+                        }
+                    }
+                },
+                error: function (response) {
+                    console.log(response);
+                }
+            });
+            return false;
+        } else {
+            return false;
+        }
+    });
+</script>
+</body>
+</html>

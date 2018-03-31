@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/a.css">
+    <link rel="stylesheet" href="../css/fonts/css/fontawesome-all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/w3-class.css">
+    <script src="../js/jq-min-slim.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <style>
+
+        .navbar-brand{
+            font-size: 1em;
+        }
+        .c{
+            background: rgb(212, 220, 228);
+        }
+        .ax{
+            background: #34373f;
+            border-left: grey solid 1px;
+        }
+
+        #edit{
+            border-left: darkred 5px solid;
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbar ax fixed-top">
+                <h4><a class="navbar-brand ml-0 text-white mt-1 pl-2" href="../Dashboard/index.html">NIRMALA MATA HIGH SCHOOL</a></h4>
+                
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="#">LOGOUT</a></li>
+                </ul>
+            </nav>  
+    <div class="cc">
+     <!-- Sidebar Navigation-->
+     <nav id="sidebar">
+        <!-- Sidebar Header-->
+        <div class="sidebar-header d-flex align-items-center">
+          <div class="avatar"><i class="fas fa-user-circle" style="font-size:52px;color:white"></i></div>
+          <div class="title">
+              <h1 class="h5">PRINCIPAL</h1>
+          </div>
+        </div>
+        <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
+        <ul class="list-unstyled text-white ">
+                <li><a class="fs" href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-users" style="font-size:24px"></i>Tearchers </a>
+                  <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+                    <li><a class="fss" href="add.html">ADD</a></li>
+                    <li><a class="fss" href="remove.html">REMOVE</a></li>
+                  </ul>
+                </li>
+                <li><a class="fs" href="#"> <i class="fa fa-paper-plane" style="font-size:24px; padding-left:2px;"></i>Details </a></li>
+                <li><a class="fs" href="facility.html"> <i class="fab fa-medapps" style="font-size:30px; padding-left:4px;"></i> Facilities </a></li>
+                <li><a class="fs" href="certi.html"> <i class="far fa-credit-card" style="font-size:24px"></i>Certificates</a></li>
+                
+                
+        </ul>
+      </nav>
+      <!-- Sidebar Navigation end-->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="mainct">
+        
+
+        <div class="w3-container">
+            <div class="w3-container mb-2 mt-2 ml-3">
+                <h2>SCHOOL DETAILS</h2>
+                <hr>
+                <form class="w3-container" action="#">
+
+                    <label for="name" class=""><b>NAME: </b><span class="starc">*</span></label>
+                    <input id="name" class="w3-input w3-border w3-margin-bottom" type="text" name="name" placeholder="BVM Engineering School">
+                    
+                    <label for="sid" class=""><b>SCHOOL ID: </b><span class="starc">*</span></label>
+                    <input id="sid" class="w3-input w3-border w3-margin-bottom" type="text" name="sid" placeholder="3007">
+
+                    <label for="address" class=""><b>ADDRESS: </b><span class="starc">*</span></label>
+                    <input id="address" class="w3-input w3-border w3-margin-bottom" type="text" name="address" placeholder="Bajuvadi Galli, Anand Chok, Gujarat">
+                     
+                    <label for="site" class=""><b>WEBSITE: </b><span class="starc">*</span></label>
+                    <input id="site" class="w3-input w3-border w3-margin-bottom" type="text" name="site" placeholder="www.bvmengineering.ac.in">
+                     
+                    <label for="pname" class=""><b>PRINCIPAL NAME: </b><span class="starc">*</span></label>
+                    <input id="pname" class="w3-input w3-border w3-margin-bottom" type="text" name="pname" placeholder="Dr. GOKUL GANDHI">
+
+                    <label for="shis" class=""><b>SCHOOL's HISTORY: </b><span class="starc">*</span></label>
+                    <input id="shis" class="w3-input w3-border w3-margin-bottom" type="text" name="shis" placeholder="Founded in 1980....">
+
+
+                    <div class="input-group mb-3">
+                        <!-- <div class="input-group-append">
+                            <span class="input-group-text flb" id="basic-addon2"><b>PHOTO *</b></span>
+                        </div> -->
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile01">
+                            <label class="custom-file-label" for="inputGroupFile01">PHOTO</label>
+                        </div>
+                        <button class="btn w3-blue" type="file">UPLOAD</button>
+                    </div>
+
+
+
+                    <button class="w3-btn w3-green w3-round">SUBMIT</button>
+                    
+                </form>
+            </div>
+        </div>
+        
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

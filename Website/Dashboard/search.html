@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Search Dashboard</title>
+    <link rel="stylesheet" href="../css/a.css">
+    <link rel="stylesheet" href="../css/fonts/css/fontawesome-all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/w3-class.css">
+    <script src="../js/jq-min-slim.js"></script>
+    <script type="text/javascript" src="../js/disable.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <style>
+
+        .navbar-brand{
+            font-size: 1em;
+        }
+        .c{
+            background: rgb(212, 220, 228);
+        }
+        .ax{
+            background: #34373f;
+            border-left: grey solid 1px;
+            margin-left: 0px;
+        }
+
+        #edit{
+            border-left: darkred 5px solid;
+        }
+
+        .stdd{
+            background: rgba(255, 238, 238, 0.521);
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        #sidebar{
+            margin-top: 72px;
+        }
+        #logout{
+            font-size: 18px;
+        }
+        a{
+          color:blue;
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbar ax fixed-top">
+                <h4 ><a class="navbar-brand ml-0 text-white mt-1 pl-2">Search Dashboard</a></h4>
+                <div class="center">
+                <ul class="nav list-unstyled text-white center" id="categories">
+                    <li class="pl-4"><label class="che">Academics
+                <input type="checkbox" class="topcheck" id="top1" checked="checked">
+                <span class="checkmark"></span>
+                </label></li>
+                    <li class="pl-4"><label class="che">Sports
+                <input type="checkbox" class="topcheck" id="top2" >
+                <span class="checkmark"></span>
+                </label></li>
+                    <li class="pl-4"><label class="che">Cultural
+                <input type="checkbox" class="topcheck" id="top3" >
+                <span class="checkmark"></span>
+                </label></li>
+                </ul>
+            </div>
+                    <ul class="nav">
+                    
+                </ul>
+            </nav>
+
+            <div class="cc sidebar1">
+     <!-- Sidebar Navigation-->
+     <nav id="sidebar">
+        <!-- Sidebar Navidation Menus-->
+        <ul class="list-unstyled text-white ">
+                <li><a class="fs" href="#exampledropdownDropdown1" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-users" style="font-size:24px"></i>Cultural</a>
+                  <ul id="exampledropdownDropdown1" class="collapse list-unstyled ">
+                    <li><a class="fss" href="#"><label class="che">Singing
+                <input type="checkbox" class="cult side1" id="singing">
+                <span class="checkmark"></span>
+                </label></a></li>
+                    <li><a class="fss" id="edit" href="#"><label class="che">Dancing
+                <input type="checkbox"  class="cult side1"  id="dancing">
+                <span class="checkmark"></span>
+                </label></a></li>
+                    <li><a class="fss"><label class="che">Acting
+                <input type="checkbox"  class="cult side1" id="acting">
+                <span class="checkmark"></span>
+                </label></a></li>
+                  </ul>
+                </li>
+                <li><a class="fs" href="#exampledropdownDropdown2" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-baseball-ball" style="font-size:24px"></i>Sports</a>
+                    <ul id="exampledropdownDropdown2" class="collapse list-unstyled ">
+                    <li><a class="fss" href="#"><label class="che">Cricket
+                <input type="checkbox" class="cult side1" id="cricket">
+                <span class="checkmark"></span>
+                </label></a></li>
+                    <li><a class="fss" id="edit" href="#"><label class="che">Football
+                <input type="checkbox" class="cult side1" id="football">
+                <span class="checkmark"></span>
+                </label></a></li>
+                    <li><a class="fss"><label class="che">Volleyball
+                <input type="checkbox" class="cult side1" id="volleyball">
+                <span class="checkmark"></span>
+                </label></a></li>
+                  </ul>
+                  </li>
+                  <li><a class="fs" href="#exampledropdownDropdown3" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-dollar-sign" style="font-size:24px"></i>Income</a>
+                    <ul id="exampledropdownDropdown3" class="collapse list-unstyled ">
+                    <li><a class="fss " href="#"><label class="che">Lower
+                <input type="checkbox" class="income side1" id="lower">
+                <span class="checkmark"></span>
+                </label></a></li>
+                    <li><a class="fss" id="edit" href="#"><label class="che">Middle
+                <input type="checkbox" class="income side1" id="middle">
+                <span class="checkmark"></span>
+                </label></a></li>
+                    <li><a class="fss"><label class="che">Higher
+                <input type="checkbox" class="income side1" id="upper">
+                <span class="checkmark"></span>
+                </label></a></li>
+                  </ul>
+                  </li>
+                  <li><a class="fs" href="#exampledropdownDropdown4" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-users" style="font-size:24px"></i>Parents</a>
+                    <ul id="exampledropdownDropdown4" class="collapse list-unstyled ">
+                    <li><a class="fss" href="#"><label class="che">NO Parents
+                <input type="checkbox" class="parent side1" id="noparent">
+                <span class="checkmark"></span>
+                </label></a></li>
+                    <li><a class="fss" id="edit" href="#"><label class="che">One Parent
+                <input type="checkbox" class="parent side1" id="oneparent">
+                <span class="checkmark"></span>
+                </label></a></li>
+                    <li><a class="fss"><label class="che">Both Parents
+                <input type="checkbox" class="parent side1" id="bothparent">
+                <span class="checkmark"></span>
+                </label></a></li>
+                  </ul>
+                  </li>
+                <li><a class="fs" href="#exampledropdownDropdown5" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-globe" style="font-size:24px"></i>By District</a>
+                  <ul id="exampledropdownDropdown5" class="collapse list-unstyled ">
+                    <li><a class="fss side1" id="l1" href="#">Ahmedabad</a></li>
+                    <li><a class="fss side1" id="l2" href="#">Anand</a></li>
+                    <li><a class="fss side1" id="l3" href="#">Rajkot</a></li>
+                    <li><a class="fss side1" id="l4" href="#">Surat</a></li>
+                    <li><a class="fss side1" id="l5" href="#">Jamnagar</a></li>
+                    <li><a class="fss side1" id="l6" href="#">Valsad</a></li>
+                    <li><a class="fss side1" id="l7" href="#">Bhavnagar</a></li>
+                    <li><a class="fss side1" id="l8" href="#">Patan</a></li>
+                    <li><a class="fss side1" id="l9" href="#">Mahesana</a></li>
+                  </ul>
+                </li>
+                <li><a class="fs" href="#"><label class="che">PWD
+                <input type="checkbox" class="side1" id="pwd">
+                <span class="checkmark"></span>
+                </label></a></li>
+                
+                
+        </ul>
+      </nav>
+      </div>
+      <div class="main">
+  <table class="table table-lg ml-4">
+  <thead>
+    <tr>
+      <th>Student Name</th>
+      <th>School Name</th>
+      <th>Standard</th>
+    </tr>
+  </thead>
+  <tbody id="mainbody">
+    
+  </tbody>
+</table>
+</div>
+      <!-- Sidebar Navigation end-->
+
+      <script type="text/javascript">
+        $(document).ready(function(){
+            console.log("yay");
+          var check=[];
+          check.push("top1");
+var datatosend = { 'Type': 'changeoverallranks','tot': check};
+$.ajax({
+                    url: "http://localhost:7824",
+                    dataType: "json",
+                    data: JSON.stringify(datatosend, null, '\t'),
+                    contentType: 'application/json;charset=UTF-8',
+                    type:'POST',
+                    success: function (data) {
+                      // console.log(data[])
+                      data= JSON.parse(JSON.stringify(data));
+                      var d= data["Succ"];
+                      var out;
+                      for(var i=0;i<d.length;i++){
+                        console.log(d[i][0]);
+                        var x;
+                        if(d[i][0]=="Rohit Patel")
+                          x=1;
+                        if(d[i][0]=="Keshani Vyas")
+                          x=2;
+                        if(d[i][0]=="Richa Thakkar")
+                          x=3;
+                        if(d[i][0]=="Shivani Patel")
+                          x=4;
+                        if(d[i][0]=="Jay Movaliya")
+                          x=5;
+                        if(d[i][0]=="Vivek Baraiya")
+                          x=6;
+                        if(i%3==0)
+                          out += "<tr class='table-active'>\
+        <td  class='table-active'><a href='./StudentDashboard"+x+".html'>"+d[i][0]+"</a></td>\
+        <td  class='table-active'>"+d[i][1]+"</td>\
+        <td  class='table-active'>"+d[i][2]+"</td>\
+      </tr>";
+                        else if(i%3==1)
+                          out += "<tr class='table-success'>\
+        <td  class='table-success'><a href='./StudentDashboard"+x+".html'>"+d[i][0]+"</a></td>\
+        <td  class='table-success'>"+d[i][1]+"</td>\
+        <td  class='table-success'>"+d[i][2]+"</td>\
+      </tr>";
+                        else
+                          out += "<tr class='table-warning'>\
+        <td  class='table-warning'><a href='./StudentDashboard"+x+".html'>"+d[i][0]+"</a></td>\
+        <td  class='table-warning'>"+d[i][1]+"</td>\
+        <td  class='table-warning'>"+d[i][2]+"</td>\
+      </tr>";
+                        $('#mainbody').html(out);
+                      }
+                      // if(data['Status']=="True"){
+                      //   window.location.href = "latest/index.html";
+                      // }
+                    },
+              error: function(response) {
+                  console.log(response);
+              },
+                });
+
+          $(".side1").click(function(){
+var idd = $(this).attr("id");
+var datatosend = { 'Type': 'changeoverallranks1','tot': idd};
+$('#mainbody').html("");
+            $.ajax({
+                    url: "http://localhost:7824",
+                    dataType: "json",
+                    data: JSON.stringify(datatosend, null, '\t'),
+                    contentType: 'application/json;charset=UTF-8',
+                    type:'POST',
+                    success: function (data) {
+                      // console.log(data[])
+                      data= JSON.parse(JSON.stringify(data));
+                      var d= data["Succ"];
+                      var out;
+                      for(var i=0;i<d.length;i++){
+                        console.log(d[i]);
+                        var x;
+                        if(d[i][0]=="Rohit Patel")
+                          x=1;
+                        if(d[i][0]=="Keshani Vyas")
+                          x=2;
+                        if(d[i][0]=="Richa Thakkar")
+                          x=3;
+                        if(d[i][0]=="Shivani Patel")
+                          x=4;
+                        if(d[i][0]=="Jay Movaliya")
+                          x=5;
+                        if(d[i][0]=="Vivek Baraiya")
+                          x=6;
+                        if(i%3==0)
+                          out += "<tr class='table-active'>\
+        <td  class='table-active'><a href='./StudentDashboard"+x+".html'>"+d[i][0]+"</a></td>\
+        <td  class='table-active'>"+d[i][1]+"</td>\
+        <td  class='table-active'>"+d[i][2]+"</td>\
+      </tr>";
+                        else if(i%3==1)
+                          out += "<tr class='table-success'>\
+        <td  class='table-success'><a href='./StudentDashboard"+x+".html'>"+d[i][0]+"</a></td>\
+        <td  class='table-success'>"+d[i][1]+"</td>\
+        <td  class='table-success'>"+d[i][2]+"</td>\
+      </tr>";
+                        else
+                          out += "<tr class='table-warning'>\
+        <td  class='table-warning'><a href='./StudentDashboard"+x+".html'>"+d[i][0]+"</a></td>\
+        <td  class='table-warning'>"+d[i][1]+"</td>\
+        <td  class='table-warning'>"+d[i][2]+"</td>\
+      </tr>";
+                        $('#mainbody').html(out);
+                      }
+                      // if(data['Status']=="True"){
+                      //   window.location.href = "latest/index.html";
+                      // }
+                    },
+              error: function(response) {
+                  console.log(response);
+              },
+                });
+          });
+
+          $(".topcheck").click(function(){
+            var idd = $(this).attr("id");
+            if(check.indexOf(idd) == -1)
+              check.push(idd);
+            else
+              check = check.filter((value)=>value!=idd);
+            console.log(check);
+            var datatosend = { 'Type': 'changeoverallranks','tot': check};
+            $('#mainbody').html("");
+            $.ajax({
+                    url: "http://localhost:7824",
+                    dataType: "json",
+                    data: JSON.stringify(datatosend, null, '\t'),
+                    contentType: 'application/json;charset=UTF-8',
+                    type:'POST',
+                    success: function (data) {
+                      // console.log(data[])
+                      data= JSON.parse(JSON.stringify(data));
+                      var d= data["Succ"]
+                      var out;
+                      for(var i=0;i<d.length;i++){
+                        console.log(d[i]);
+                        var x;
+                        if(d[i][0]=="Rohit Patel")
+                          x=1;
+                        if(d[i][0]=="Keshani Vyas")
+                          x=2;
+                        if(d[i][0]=="Richa Thakkar")
+                          x=3;
+                        if(d[i][0]=="Shivani Patel")
+                          x=4;
+                        if(d[i][0]=="Jay Movaliya")
+                          x=5;
+                        if(d[i][0]=="Vivek Baraiya")
+                          x=6;
+                        if(i%3==0)
+                          out += "<tr class='table-active'>\
+        <td  class='table-active'><a href='./StudentDashboard"+x+".html'>"+d[i][0]+"</a></td>\
+        <td  class='table-active'>"+d[i][1]+"</td>\
+        <td  class='table-active'>"+d[i][2]+"</td>\
+      </tr>";
+                        else if(i%3==1)
+                          out += "<tr class='table-success'>\
+        <td  class='table-success'><a href='./StudentDashboard"+x+".html'>"+d[i][0]+"</a></td>\
+        <td  class='table-success'>"+d[i][1]+"</td>\
+        <td  class='table-success'>"+d[i][2]+"</td>\
+      </tr>";
+                        else
+                          out += "<tr class='table-warning'>\
+        <td  class='table-warning'><a href='./StudentDashboard"+x+".html'>"+d[i][0]+"</a></td>\
+        <td  class='table-warning'>"+d[i][1]+"</td>\
+        <td  class='table-warning'>"+d[i][2]+"</td>\
+      </tr>";
+                        $('#mainbody').html(out);
+                      }
+                      // if(data['Status']=="True"){
+                      //   window.location.href = "latest/index.html";
+                      // }
+                    },
+              error: function(response) {
+                  console.log(response);
+              },
+                });
+          });
+        });
+      </script>
+    
+        </body>
+        </html>

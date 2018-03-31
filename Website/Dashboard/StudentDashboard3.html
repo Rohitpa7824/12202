@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Richa Thakkar</title>
+    <link rel="stylesheet" href="../css/a.css">
+    <link rel="stylesheet" href="../css/fonts/css/fontawesome-all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/w3-class.css">
+    <script src="../js/jq-min-slim.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <!-- <script src="../js/chart.js"></script>
+    <script src="../js/canvasmin.js"></script> -->
+    <script src="../js/chrt.js"></script>
+
+
+    <!-- <script>
+            
+            
+
+        //     window.onload = function (){
+            
+        //     var options = {
+        //         animationEnabled: true,  
+        //         title:{
+        //             text: "Year-wise Result"
+        //         },
+        //         axisX: {
+        //             valueFormatString: "#"
+        //         },
+        //         axisY: {
+        //             title: "Percentage(%)",
+        //             valueFormatString: "#,##0.##",
+        //             // suffix: "%",
+        //             includeZero: false
+        //         },
+        //         data: [{
+        //             yValueFormatString: "###",
+        //             xValueFormatString: "Percentage",
+        //             type: "spline",
+        //             dataPoints: [
+        //             { x:1, y: 80 },
+        //             { x: 2, y: 82 },
+        //             { x: 3, y: 98 },
+        //             { x: 4, y: 85 },
+        //                 { x: 5, y: 90 },
+        //                 { x: 6, y: 96 },
+                        
+        //             ]
+        //         }]
+        //     };
+          
+        //     $("#chartContainer").CanvasJSChart(options);
+            
+        // }
+
+
+
+
+
+
+
+        // HELLO
+        new Chart(document.getElementById("l1t"), {
+  type: 'line',
+  data: {
+    labels: [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050],
+    datasets: [{ 
+        data: [86,114,106,106,107,111,133,221,783,2478],
+        label: "Africa",
+        borderColor: "#3e95cd",
+        fill: false
+      }, { 
+        data: [282,350,411,502,635,809,947,1402,3700,5267],
+        label: "Asia",
+        borderColor: "#8e5ea2",
+        fill: false
+      }, { 
+        data: [168,170,178,190,203,276,408,547,675,734],
+        label: "Europe",
+        borderColor: "#3cba9f",
+        fill: false
+      }, { 
+        data: [40,20,10,16,24,38,74,167,508,784],
+        label: "Latin America",
+        borderColor: "#e8c3b9",
+        fill: false
+      }, { 
+        data: [6,3,2,2,7,26,82,172,312,433],
+        label: "North America",
+        borderColor: "#c45850",
+        fill: false
+      }
+    ]
+  },
+  options: {
+    title: {
+      display: true,
+      text: 'World population per region (in millions)'
+    }
+  }
+});
+        // JELL
+    </script> -->
+    <style>
+
+        .navbar-brand{
+            font-size: 1em;
+        }
+        .c{
+            background: rgb(212, 220, 228);
+        }
+
+        .upnav{
+            background: #2c2e35;
+            /* margin: 0 auto; */
+            /* width: 100%; */
+            
+        }
+        .main{
+            margin-top: 120px;
+            border: solid darkblue 2px; 
+            width: 80%;
+            border-radius: 7px; 
+        }
+
+
+        .btn1{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body class="">
+    <div class="container-fluid p-3 upnav fixed-top">
+        <header class="w3-center">
+            <h2 class="text-white">STUDENT DASHBOARD</h2>
+        </header>
+    </div>  
+
+    
+
+    <div class="container-fluid text-white main p-0" style="width:70%">
+            <button class="btn btn-primary btn-lg btn-block" type="button" data-toggle="collapse" data-target="#c1" aria-expanded="false" aria-controls="collapseExample">
+                BIO DATA
+            </button>
+
+
+
+        <div class="collapse show" id="c1">
+                <div class="row">
+                    <div class="col">
+                        <div class="m-1">
+                            <img class="img-fluid ml-5" src="../images/t3.jpg" alt="" width="65%">
+                        </div>
+                    </div>    
+                    <div class="col">
+                    <div class="table-responsive-xl mt-2">
+                                  
+                        <table class="table w3-text-black" >
+                            <tr>
+                                <td>NAME</td>
+                                <td>RICHA THAKKAR</td>
+                            </tr>
+                            <tr>
+                                    <td>ADDHAR NO.</td>
+                                    <td>302130789223</td>
+                                </tr>
+                                <tr>
+                                        <td>DOB</td>
+                                        <td>5-06-1996</td>
+                                    </tr>
+                                    <tr>
+                                            <td>GENDER</td>
+                                            <td>FEMALE</td>
+                                        </tr>
+                                        <tr>
+                                                <td>CONTACT</td>
+                                                <td>924238912</td>
+                                            </tr>
+                                            <tr>
+                                                    <td>ADDRESS</td>
+                                                    <td>Meghawadi, Vanakbara, Diu</td>
+                                                </tr>
+                        </table>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+    </div>
+
+    <div class="container-fluid text-white main p-0 mt-2" style="width:70%">
+            <button class="btn btn-primary btn-lg btn-block" type="button" data-toggle="collapse" data-target="#c2" aria-expanded="false" aria-controls="c1">
+                RESULTS
+            </button>
+
+        <div class="collapse show" id="c2">
+            <div class="row">
+                <div class="col">
+                     <!-- <div id="chartContainer" style="height: 300px; width: 100%;"></div> -->
+                     <canvas id="l1t" width="800" height="300"></canvas>
+                    </div>    
+                <!-- <div class="col">
+                        <div id="chartContainer1" style="height: 300px; width: 100%;"></div>
+                
+                </div>
+                <div class="col">
+                        <div id="chartContainer2" style="height: 300px; width: 100%;"></div>
+                
+                </div> -->
+            </div>                
+        </div>
+    </div>
+    <div class="container-fluid text-white main p-0 mt-2" style="width:70%">
+            <button class="btn btn-primary btn-lg btn-block" type="button" data-toggle="collapse" data-target="#c3" aria-expanded="false" aria-controls="collapseExample">
+                ACHIEVEMENTS
+            </button>
+
+        <div class="collapse show w3-text-black" id="c3">
+            <table class="table w3-center">
+                <tr>
+                    <td><b><a class="nav-item" href="">Science Exhibition</a></b></td>
+                </tr>
+                <tr>
+                    <td><b><a class="" href="">Acting</a></b></td>
+                </tr>
+                
+            </table>          
+        </div>
+    </div>
+    <div class="container-fluid text-white main p-0 mt-2" style="width:70%">
+            <button class="btn btn-primary btn-lg btn-block" type="button" data-toggle="collapse" data-target="#c4" aria-expanded="false" aria-controls="collapseExample">
+                INTEREST
+            </button>
+
+            <div class="collapse show w3-text-black" id="c4">
+                    <table class="table w3-center">
+                        <tr>
+                            <td><b><a class="btn1" href="">Volleyball</a></b></td>
+                        </tr>
+                        <tr>
+                            <td><b><a class="btn1" href="">Cricket</a></b></td>
+                        </tr>
+                        <tr>
+                            <td><b><a class="btn1" href="">Dodgeball</a></b></td>
+                        </tr>
+                        <tr>
+                            <td><b><a class="btn1" href="">Swimming</a></b></td>
+                        </tr>
+                        <tr>
+                            <td><b><a class="btn1" href=""></a>Boxing</a></b></td>
+                        </tr>
+                    </table>          
+                </div>
+    </div>
+
+
+    <div class="container-fluid text-white main p-0 mt-2" style="width:70%">
+            <button class="btn btn-primary btn-lg btn-block" type="button" data-toggle="collapse" data-target="#c5" aria-expanded="false" aria-controls="collapseExample">
+                PARENTS DETAILS
+            </button>
+
+        <div class="collapse show mb-2 w3-text-black" id="c5">
+            <div class="container">
+            <div class="row">
+                <div class="col">
+                    <label for="f1"><h4><b>Father's Name:</b></h4></label>
+                    <h4 class="center">Prabhashbhai Patel</h4>
+                </div>
+                <div class="col">
+                    <label for="f2"><h4><b>Mobile No: </b></h4></label>
+                    <h4 class="center">8128906201</h4>
+                </div>          
+            </div>
+        </div>                
+        </div>
+    </div>
+    <div class="m-5"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- MODAL -->
+    <div id="id01" class="w3-modal w3-round" >
+                        
+                            <div class="w3-modal-content mt-2"style="width:60%">
+                                <div class="container">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                                <span class="input-group-text" id="c1">STANDARD</span>
+                                            </div>
+                                            <span class="form-control"  aria-label="name" aria-describedby="c1"><b>4th</b></span>
+                                    </div>  
+                            
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Subjects</th>
+                                                <th>Marks</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Maths</td>
+                                                <td>86</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Science</td>
+                                                <td>75</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Social Science</td>
+                                                <td>73</td>
+                                            </tr>
+                                            <tr>
+                                                <td>English</td>
+                                                <td>56</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hindi</td>
+                                                <td>60</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <button onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</button>
+                                   
+                                </div>
+                            </div>
+                        </div>    
+                        <!-- Modal ENDS -->
+    
+    
+                         
+
+
+        <script>
+            
+
+                //     window.onload = function (){
+                    
+                //     var options = {
+                //         animationEnabled: true,  
+                //         title:{
+                //             text: "Year-wise Result"
+                //         },
+                //         axisX: {
+                //             valueFormatString: "#"
+                //         },
+                //         axisY: {
+                //             title: "Percentage(%)",
+                //             valueFormatString: "#,##0.##",
+                //             // suffix: "%",
+                //             includeZero: false
+                //         },
+                //         data: [{
+                //             yValueFormatString: "###",
+                //             xValueFormatString: "Percentage",
+                //             type: "spline",
+                //             dataPoints: [
+                //             { x:1, y: 80 },
+                //             { x: 2, y: 82 },
+                //             { x: 3, y: 98 },
+                //             { x: 4, y: 85 },
+                //                 { x: 5, y: 90 },
+                //                 { x: 6, y: 96 },
+                                
+                //             ]
+                //         }]
+                //     };
+                  
+                //     $("#chartContainer").CanvasJSChart(options);
+                    
+                // }
+        
+        
+        
+        
+        
+        
+        
+                // HELLO
+        var chartc = new Chart(document.getElementById("l1t"), {
+          type: 'line',
+          data: {
+            labels: [1,2,3,4,5,6],
+            datasets: [{ 
+                label: '%',
+                data: [86,90,83,70,91,96],
+                // label: "Africa",
+                borderColor: "#3e95cd",
+                fill: false
+              }
+            ]
+          },
+          options: {
+            title: {
+              display: true,
+              text: "Year-wise Result"
+            },
+            'onClick' : function (evt, item) {
+                document.getElementById('id01').style.display='block';
+                console.log ('legend onClick', item);
+                console.log('legd item', item);
+            }
+          }
+        });
+            var ctx=$('#l1t');
+            ctx.onClick=function(evt){
+                var active = chartc.getPointsAtEvent(evt);
+                console.log(active); 
+            }
+                // JELL
+            </script>
+
+</body>
+</html>

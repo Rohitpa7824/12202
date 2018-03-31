@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Student management System</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="../css/bootstrap.css" rel="stylesheet"/>
+    <link href="../css/registration.css" rel="stylesheet"/>
+    <script src="../js/jq-min-slim.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
+    <script src="../js/additional-methods.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+<br/>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="well col-lg-6" style="background: white;">
+            <form name="myForm" id="myForm" method="post"
+                  style="padding-left: 30px;padding-right: 30px;" novalidate>
+                <div class="page-header text-center">
+                    <h2>Registration</h2>
+                </div>
+                <div class="row form-group">
+                    <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <label for="txtName">Name</label>
+                        <input type="text" name="name1" maxlength="30" id="txtName" class="form-control"
+                               placeholder="First Name" pattern="/^[a-zA-Z\_ ]*$/" required/>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label for="txtAddress">Address</label>
+                    <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <textarea id="txtAddress" name="address"
+                                  class="form-control" placeholder="Address" pattern="/^[a-zA-Z0-9,_ -]*$/" required></textarea>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <label for="txtSchoolId">School Id</label>
+                        <input type="text" name="schoolId" maxlength="30" id="txtSchoolId" class="form-control"
+                               placeholder="School Id" pattern="/^[a-zA-Z0-9\_ -]*$/" required/>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <label for="txtWebsite">Website</label>
+                        <input type="url" name="website" maxlength="30" id="txtWebsite" class="form-control"
+                               placeholder="https://example.com/index" required/>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label for="txtEmail1">Email</label>
+                    <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <input type="email" name="email" id="txtEmail1" maxlength="254" class="form-control"
+                               placeholder="Email" required/>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label for="txtPassword">Password</label>
+                    <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <input type="password" name="password" id="txtPassword" maxlength="30" class="form-control"
+                               placeholder="Password" required/>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <label for="txtCPassword">Confirm Password</label>
+                    <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <input type="password" name="cPassword" maxlength="30"
+                               id="txtCPassword" class="form-control" placeholder="Confirm Password" required/>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <input type="submit" ID="btnSignUp" value="Sign Up"
+                               class="btn btn-lg width_100 btn-success"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    jQuery.validator.setDefaults({
+        highlight: function (element) {
+            jQuery(element).closest('.form-group').addClass('has-error');
+        },
+        unhighlight: function (element) {
+            jQuery(element).closest('.form-group').removeClass('has-error');
+        },
+        errorElement: 'span',
+        errorClass: 'label label-danger',
+        errorPlacement: function (error, element) {
+            if (element.parent('.input-group').length) {
+                error.insertAfter(element.parent());
+            } else {
+                error.insertAfter(element);
+            }
+        }
+    });
+    $("#myForm").validate({
+        rules: {
+            name1: {
+                required: true,
+                pattern: true
+            },
+            address: {
+                required: true
+            },
+            schoolId: {
+                required: true
+            },
+            website: {
+                required: true,
+                url: true
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            password: "required",
+            cPassword: {
+                required: true
+            }
+        },
+        messages: {
+            name1: {
+                required: "Name is required."
+            },
+            address: {
+                required: "Address is required."
+            },
+            schoolId: {
+                required: "School Id is required."
+            },
+            website: {
+                required: "Website is required.",
+                url: "Please Enter valid Website."
+            },
+            password: "Your password is required.",
+            email: {
+                required: "Your Email is required.",
+                email: "Enter a valid email."
+            },
+            cPassword: {
+                required: "Confirm password is required."
+            }
+        }
+    });
+</script>
+</body>
+</html>

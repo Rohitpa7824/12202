@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/a.css">
+    <link rel="stylesheet" href="../css/fonts/css/fontawesome-all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/w3-class.css">
+    <script src="../js/jq-min-slim.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <style>
+
+
+        .navbar-brand{
+            font-size: 1em;
+        }
+        .c{
+            background: rgb(212, 220, 228);
+        }
+        .ax{
+            background: #34373f;
+            border-left: grey solid 1px;
+        }
+
+        #edit{
+            border-left: darkred 5px solid;
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbar ax fixed-top" id="nav01">
+                <h4><a class="navbar-brand ml-0 text-white mt-1 pl-2" href="../Dashboard/index.html">NIRMALA MATA HIGH SCHOOL</a></h4>
+                
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="#">LOGOUT</a></li>
+                </ul>
+            </nav>  
+    <div class="cc">
+     <!-- Sidebar Navigation-->
+     <nav id="sidebar">
+        <!-- Sidebar Header-->
+        <div class="sidebar-header d-flex align-items-center">
+          <div class="avatar"><i class="fas fa-user-circle" style="font-size:52px;color:white"></i></div>
+          <div class="title">
+              <h1 class="h5">PRINCIPAL</h1>
+          </div>
+        </div>
+        <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
+        <ul class="list-unstyled text-white ">
+                <li><a class="fs" href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-users" style="font-size:24px"></i>Tearchers </a>
+                  <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+                    <li><a class="fss" href="add.html">ADD</a></li>
+                    <li><a class="fss" href="remove.html">REMOVE</a></li>
+                  </ul>
+                </li>
+                <li><a class="fs" href="detail.html"> <i class="fa fa-paper-plane" style="font-size:24px; padding-left:2px;"></i>Details </a></li>
+                <li><a class="fs" href="facility.html"> <i class="fab fa-medapps" style="font-size:30px; padding-left:4px;"></i> Facilities </a></li>
+                <li><a class="fs" href="#"> <i class="far fa-credit-card" style="font-size:24px"></i>Certificates</a></li>
+                
+                
+        </ul>
+      </nav>
+      <!-- Sidebar Navigation end-->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="mainct">
+
+
+        <div class="w3-container">
+            <div class="w3-container mb-2 mt-2 ml-3">
+                <h2>Certificate Pending for Approval</h2>
+                <hr>
+
+                <!-- CARD -->
+                <div class="w3-container" >
+
+                    <div class="card" style="width: 100%;" onclick="document.getElementById('id01').style.display='block'">
+                        <div class="input-group m-0">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="a1">NAME</span>
+                            </div>
+                            <span class="form-control"  aria-label="name" aria-describedby="a1"><b>ROHIT PATEL</b></span>
+
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="a2">CERTIFICATE</span>
+                            </div>
+                            <span class="form-control"  aria-label="certi" aria-describedby="a2"><b>Science Exhibition</b></span>
+
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="a3">STD</span>
+                                <span class="form-control"  aria-label="std" aria-describedby="a3"><b>3rd</b></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mt-3" style="width: 100%;" onclick="document.getElementById('id02').style.display='block'">
+                        <div class="input-group m-0">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="c1">NAME</span>
+                            </div>
+                            <span class="form-control"  aria-label="name" aria-describedby="c1"><b>JAY MOVALIYA</b></span>
+
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="c2">CERTIFICATE</span>
+                            </div>
+                            <span class="form-control"  aria-label="certi" aria-describedby="c2"><b>World Conference</b></span>
+
+                            <div class="input-group-prepend">
+                                    <span class="input-group-text" id="c3">STD</span>
+                                    <span class="form-control"  aria-label="std" aria-describedby="c3"><b>4th</b></span>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                </div>
+            <!-- CARD ENDS HERE -->
+
+
+
+
+            <!-- Modal -->
+                    <!-- The Modal -->
+                    <div id="id01" class="w3-modal w3-round" >
+                        <div class="w3-modal-content mt-2"style="width:60%">
+                            <div class="container">
+                               <header class="w3-container w3-white"> 
+                                    <h3 style="text-align:center;">Verify</h3>
+                                    <hr>
+                                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                                </header>
+                               
+                                <div class="input-group mb-3 ">
+                                    <div class="input-group-append ">
+                                        <span class="input-group-text flb w3-blue" id="b1"><b>NAME</b></span>                                        
+                                    </div>
+                                    <span class="form-control"  aria-label="name" aria-describedby="b1"><b>JAY Patel</b></span>
+                                    <div class="input-group-append ml-4">
+                                        <span class="input-group-text flb w3-blue" id="b2"><b>STD</b></span>                                        
+                                    </div>
+                                    <span class="form-control"  aria-label="std" aria-describedby="b2"><b>4rd</b></span>
+
+                                    <div class="input-group-append ml-4">
+                                        <span class="input-group-text flb w3-blue" id="b5"><b>Rank</b></span>                                        
+                                    </div>
+                                    <span class="form-control"  aria-label="rank" aria-describedby="b2"><b>2st</b></span>
+                                </div>
+
+
+                                <div class="input-group mb-3 ">
+                                    <div class="input-group-append ">
+                                        <span class="input-group-text flb w3-blue" id="b3"><b>CERTIFICATE NAME</b></span>                                        
+                                    </div>
+                                    <span class="form-control"  aria-label="name" aria-describedby="b3"><b>Innovation Exhibition</b></span>
+
+                                   
+                                </div>
+
+                                <div class="input-group mb-3 ">
+                                    <div class="input-group-append ">
+                                        <span class="input-group-text flb w3-blue" id="b3"><b>ORGNISATION</b></span>
+                                    </div>
+                                    <span class="form-control"  aria-label="name" aria-describedby="b3"><b>Innovation Exhibition</b></span>
+                                    <div class="input-group-append ml-4">
+                                        <span class="input-group-text flb w3-blue" id="b4"><b>ORGANISATION</b></span>
+                                    </div>
+                                    <span class="form-control"  aria-label="std" aria-describedby="b4"><b>Microsoft</b></span>
+
+                                </div>
+                               
+                               
+                                
+                                <div class="input-group-append mt-3">
+                                    <div class="input-group-append ">
+                                        <span class="input-group-text flb w3-blue" id="b1"><b>UPLOADED BY</b></span>                                        
+                                    </div>
+                                    <span class="form-control"  aria-label="name" aria-describedby="b1"><b>Pranay Patel</b></span>
+                                    <div class="input-group-append ml-4">
+                                        <span class="input-group-text flb w3-blue" id="b2"><b>DATE</b></span>                                        
+                                    </div>
+                                    <span class="form-control"  aria-label="std" aria-describedby="b2"><b>01-04-2018</b></span>
+                                </div>
+                                <div class=" w3-container w3-bar w3-blue mt-4">
+                                    <div class="w3-bar-item"><b>PHOTO</b></div>
+                                </div>
+                                <div class=" w3-container mt-2 w3-center" style="overflow:auto">
+                                    <img src="../images/certi.png" alt="" height="500px" width="auto">
+                                </div>
+                                <div class="w3-container mt-4">
+                                    <footer class="w3-container mb-2 ">
+                                        <button class="w3-btn w3-green w3-round w3-large">VERIFY</button>
+                                        <button class="w3-green w3-right w3-btn w3-red w3-round w3-large" onclick="document.getElementById('id01').style.display='none'">REJECT</button>
+                                    </footer>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                    <!-- Modal ENDS -->
+
+
+                     <!-- The Modal -->
+                     <div id="id02" class="w3-modal w3-round" >
+                            <div class="w3-modal-content mt-2"style="width:60%">
+                                <div class="container">
+                                   <header class="w3-container w3-white">
+                                        <h3 style="text-align:center;">Verify</h3>
+                                        <hr>
+                                        <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                                    </header>
+
+                                    <div class="input-group mb-3 ">
+                                        <div class="input-group-append ">
+                                            <span class="input-group-text flb w3-blue" id="b1"><b>NAME</b></span>
+                                        </div>
+                                        <span class="form-control"  aria-label="name" aria-describedby="b1"><b>Rohit Patel</b></span>
+                                        <div class="input-group-append ml-4">
+                                            <span class="input-group-text flb w3-blue" id="b2"><b>STD</b></span>
+                                        </div>
+                                        <span class="form-control"  aria-label="std" aria-describedby="b2"><b>3rd</b></span>
+
+                                        <div class="input-group-append ml-4">
+                                            <span class="input-group-text flb w3-blue" id="b5"><b>Rank</b></span>
+                                        </div>
+                                        <span class="form-control"  aria-label="rank" aria-describedby="b2"><b>1st</b></span>
+                                    </div>
+
+
+                                    <div class="input-group mb-3 ">
+                                        <div class="input-group-append ">
+                                            <span class="input-group-text flb w3-blue" id="b3"><b>CERTIFICATE NAME</b></span>
+                                        </div>
+                                        <span class="form-control"  aria-label="name" aria-describedby="b3"><b>Google Inc.</b></span>
+                                        <div class="input-group-append ml-4">
+                                            <span class="input-group-text flb w3-blue" id="b4"><b>LEVEL</b></span>
+                                        </div>
+                                        <span class="form-control"  aria-label="std" aria-describedby="b4"><b>State</b></span>
+
+                                    </div>
+
+
+
+                                    <div class="input-group-append mt-3">
+                                        <div class="input-group-append ">
+                                            <span class="input-group-text flb w3-blue" id="b1"><b>UPLOADED BY</b></span>
+                                        </div>
+                                        <span class="form-control"  aria-label="name" aria-describedby="b1"><b>Pranay Patel</b></span>
+                                        <div class="input-group-append ml-4">
+                                            <span class="input-group-text flb w3-blue" id="b2"><b>DATE</b></span>
+                                        </div>
+                                        <span class="form-control"  aria-label="std" aria-describedby="b2"><b>01-04-2018</b></span>
+                                    </div>
+                                    <div class=" w3-container w3-bar w3-blue mt-4">
+                                        <div class="w3-bar-item"><b>PHOTO</b></div>
+                                    </div>
+                                    <div class=" w3-container mt-2 w3-center" style="overflow:auto">
+                                        <img src="../images/certi.png" alt="" height="500px" width="auto">
+                                    </div>
+                                    <div class="w3-container mt-4">
+                                        <footer class="w3-container mb-2 ">
+                                            <button class="w3-btn w3-green w3-round w3-large">VERIFY</button>
+                                            <button class="w3-green w3-right w3-btn w3-red w3-round w3-large" onclick="document.getElementById('id02').style.display='none'">RETURN</button>
+                                        </footer>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal -->
+            </div>
+        </div>
+        
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+﻿html, body {
+  font-family: 'Roboto', 'Helvetica', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.width_100 {
+    width: 100%;
+}
+.align_right {
+    text-align: center;
+}
+.modal-header
+{
+    background:#00897B;
+    color:white;
+}

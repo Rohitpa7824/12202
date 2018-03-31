@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/a.css">
+    <link rel="stylesheet" href="../css/fonts/css/fontawesome-all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/w3-class.css">
+    <script src="../js/jq-min-slim.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <style>
+
+        .navbar-brand{
+            font-size: 1em;
+        }
+        .c{
+            background: rgb(212, 220, 228);
+        }
+        .ax{
+            background: #34373f;
+            border-left: grey solid 1px;
+        }
+
+        #remove{
+            border-left: darkred 5px solid;
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbar ax fixed-top">
+                <h4><a class="navbar-brand ml-0 text-white mt-1 pl-2" href="../Dashboard/index.html">NIRMALA MATA HIGH SCHOOL</a></h4>
+                
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="#">LOGOUT</a></li>
+                </ul>
+            </nav>  
+    <div class="cc">
+     <!-- Sidebar Navigation-->
+     <nav id="sidebar">
+        <!-- Sidebar Header-->
+        <div class="sidebar-header d-flex align-items-center">
+          <div class="avatar"><i class="fas fa-user-circle" style="font-size:52px;color:white"></i></div>
+          <div class="title">
+              <h1 class="h5">PRINCIPAL</h1>
+          </div>
+        </div>
+        <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
+        <ul class="list-unstyled text-white ">
+                <li><a class="fs" href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="fas fa-users" style="font-size:24px"></i>Tearchers </a>
+                  <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
+                    <li><a class="fss" href="add.html">ADD</a></li>
+                    <li><a class="fss" id="remove" href="#">REMOVE</a></li>
+                  </ul>
+                </li>
+                <li><a class="fs" href="detail.html"> <i class="fa fa-paper-plane" style="font-size:24px; padding-left:2px;"></i>Details </a></li>
+                <li><a class="fs" href="facility.html"> <i class="fab fa-medapps" style="font-size:30px; padding-left:4px;"></i>Facilities </a></li>
+                <li><a class="fs" href="certi.html"> <i class="far fa-credit-card" style="font-size:24px"></i>Certificates</a></li>
+                
+                
+        </ul>
+      </nav>
+      <!-- Sidebar Navigation end-->
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="main">
+            <div class="w3-container">
+                    <div class="w3-container mb-2 mt-2 ml-3">
+                        <h2 style="display:inline" class="">Remove Teacher</h2>
+                        <hr>
+                    </div>
+                    <div class="container ml-4">
+                        <form action="">
+                            <div class="w3-container mb-2 mt-2 ml-3">
+                                <select class="w3-btn w3-xlarge w3-blue w3-round" name="Teacher" id="dd">
+                                    <option class="w3-btn w3-white w3-round" value="">Select Teacher</option>
+                                    <option value="BAKHRU" class="w3-btn w3-white w3-round">BAKHRU</option>
+                                    <option value="MOSIN" class="w3-btn w3-white w3-round">MOSIN</option>
+                                    <option value="NARENDRA" class="w3-btn w3-white w3-round">NARENDRA</option>
+                                </select>
+                            </div>
+
+                            <div class="w3-container mb-2 mt-2 ml-3">
+                                <button class="w3-button w3-red">Remove</button>
+                                
+                            </div>
+                        </form>
+                    </div>
+            </div>
+    </div>
+</body>
+</html>
